@@ -14,8 +14,8 @@ CREATE TABLE Category (
 CREATE TABLE Product (
     id INT AUTO_INCREMENT NOT NULL,
     product_name VARCHAR(255) NOT NULL,
-    price INT NOT NULL,
-    stock INT NOT NULL,
+    price DECIMAL NOT NULL,
+    stock INT NOT NULL DEFAULT 10,
     FOREIGN KEY (category_id) REFERENCES Category (id), PRIMARY KEY (id)
 );
 
@@ -27,7 +27,8 @@ CREATE TABLE Tag (
 
 CREATE TABLE ProductTag (
     id INT AUTO_INCREMENT NOT NULL,
-    product_id VARCHAR(255) NOT NULL,
-    FOREIGN KEY (tag_id) REFERENCES Tag,
-    FOREIGN KEY (product_id) REFERENCES Product (id), (id)PRIMARY KEY (id)
+    product_id INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (tag_id) REFERENCES Tag (id),
+    FOREIGN KEY (product_id) REFERENCES Product (id)
 );

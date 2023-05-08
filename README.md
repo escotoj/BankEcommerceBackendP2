@@ -18,7 +18,7 @@
   
   ## Credits
   Jose Escoto
-  Sequlize.org to understand the the BelongsTo and BelongsToMany, findOne vs findbyPk methods.
+  Sequlize.org to understand the the BelongsTo and BelongsToMany, findOne vs findbyPk, and validations methods.
   MVC class recordings to help with GET and POST route set up. 
   
   ## Questions
