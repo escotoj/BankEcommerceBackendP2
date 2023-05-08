@@ -18,6 +18,7 @@
   
   ## Credits
   Jose Escoto
+  Sequlize.org to understand the the BelongsTo and BelongsToMany methods.
   
   ## Questions
   must fill out each route to perform crud data search using req.body

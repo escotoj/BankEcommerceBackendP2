@@ -8,18 +8,12 @@ router.get('/', async (req, res) => {
   // be sure to include its associated Products
   try {
     const categoryData = await Category.findAll({
-      include: [
-      {
-        Model: Product,
-        attributes: ['id', 'category_id'],
-      }
-    ]
+      include:
+      [
+        Product
+      ]
   });
-    const categories = categoryData.map(category => category.get({plain: true}));
-    res.render('categories', {
-      sentence: 'These are all the categories and their associated products.',
-      categories
-    });
+  res.json(categoryData);
   } catch (error) {
     res.status(500).json({error});
   }
@@ -28,15 +22,14 @@ router.get('/', async (req, res) => {
 router.get('/:id', (req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
-Category.findOne({
+
+  // findOne function is for the first instace, must use findbypk?
+Category.findByPk({
   where: {
     id: req.params.id,
     },
   include: [
-    {
-      Model: Product,
-      attributes: ['id', 'category_id'],
-    }
+   Product
   ]
 })
 .then((category) => {

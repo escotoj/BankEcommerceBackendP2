@@ -8,22 +8,36 @@ router.get('/', async (req, res) => {
   // be sure to include its associated Product data
   try {
     const tagData = await Tag.findAll({
-      include: [
-      {
-        Model: Product,
-        attributes: ['id', 'product_name'],
-      },
+    include: [
+      Product
     ]
   });
-    const tags = tagData.map(tag => tag.get({plain: true}));
-    res.render('tags', {
-      sentence: 'These are all the tags and their associated products',
-      tags
-    });
+  res.json(tagData);
   } catch (error) {
     res.status(500).json({error});
   }
-})
+});
+
+
+
+  //   try {
+//     const tagData = await Tag.findAll({
+//       include: [
+//       {
+//         Model: Product,
+//         attributes: ['id', 'product_name'],
+//       },
+//     ]
+//   });
+//     const tags = tagData.map(tag => tag.get({plain: true}));
+//     res.render('tags', {
+//       sentence: 'These are all the tags and their associated products',
+//       tags
+//     });
+//   } catch (error) {
+//     res.status(500).json({error});
+//   }
+// });
 
 router.get('/:id', (req, res) => {
   // find a single tag by its `id`
