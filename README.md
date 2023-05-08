@@ -18,11 +18,14 @@
   
   ## Credits
   Jose Escoto
-  Sequlize.org to understand the the BelongsTo and BelongsToMany methods.
+  Sequlize.org to understand the the BelongsTo and BelongsToMany, findOne vs findbyPk methods.
+  MVC class recordings to help with GET and POST route set up. 
   
   ## Questions
-  must fill out each route to perform crud data search using req.body
-  sequlize the data in the server.js
+ SQL errors on postman
+ Help with PUT and DELETE routes
+ Help with matching the Schema to the model/index.js 
+  
 
   [!link]
 
