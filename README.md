@@ -22,12 +22,15 @@
   MVC class recordings to help with GET and POST route set up. 
   
   ## Questions
- SQL errors on postman
- Help with PUT and DELETE routes
- Help with matching the Schema to the model/index.js 
+ GET routes for all is working
+ need to test, PUT POST and DELETE for tag and Categories
+ and DELETE on products.
+ How to demonstrate through postman
+ Settign up a work flow on project two, with branching, names, assigneing roles and tasks. 
   
-
-  [!link]
+## Origninal Repo
+Had to re-clone the starter code and transfer my work over from my orginal repo below. 
+  [!link](https://github.com/escotoj/EcommerBackend)
 
   ## TODO
   - product-routes.js - [`created most routes just need to test and add DELETE route`] 

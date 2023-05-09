@@ -21,10 +21,12 @@ router.get("/:id", (req, res) => {
   // be sure to include its associated Products
 
   // findOne function is for the first instace, must use findbypk?
-  Category.findByPk({
-    where: {
-      id: req.params.id,
-    },
+  // the first param you pass is expected to by an ID
+  Category.findByPk(req.params.id, {
+    // where: {
+    //   id: req.params.id,
+    //   username: req.body.username
+    // },
     include: [Product],
   })
     .then((category) => {

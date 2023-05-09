@@ -25,10 +25,10 @@ USE ecommerce_db;
 --     PRIMARY KEY (id)
 -- );
 
-CREATE TABLE ProductTag (
-    id INT AUTO_INCREMENT NOT NULL,
-    product_id INT,
-    PRIMARY KEY (id),
-    FOREIGN KEY (tag_id) REFERENCES Tag (id),
-    FOREIGN KEY (product_id) REFERENCES Product (id)
-);
+-- CREATE TABLE ProductTag (
+--     id INT AUTO_INCREMENT NOT NULL,
+--     product_id INT,
+--     PRIMARY KEY (id),
+--     FOREIGN KEY (tag_id) REFERENCES Tag (id),
+--     FOREIGN KEY (product_id) REFERENCES Product (id)
+-- );

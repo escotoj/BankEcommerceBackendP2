@@ -22,12 +22,14 @@ router.get('/', async (req, res) => {
 router.get('/:id', (req, res) => {
   // find a single tag by its `id`
   // be sure to include its associated Product data
-  Tag.findByPk({
+  Tag.findOne({
+    // findOne can also find data by username, email, title
+    // findOne, you want to use it when you are working with a unique table
     where: {
       id: req.params.id
     },
     include: [
-    Product
+      { model: Product, through: ProductTag}
     ]
   })
   .then((tag) => {
